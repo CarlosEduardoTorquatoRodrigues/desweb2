@@ -18,11 +18,11 @@ public class Disciplina {
         this.professores = professores;
     }
 
-    public void setnomeDisciplina(string nomeDisciplina){
+    public void setnomeDisciplina(String nomeDisciplina){
         this.nomeDisciplina = nomeDisciplina;
     }
     
-    public int getNomeDisplina(){
+    public String getNomeDisplina(){
         return this.nomeDisciplina;
     }
 
@@ -42,8 +42,15 @@ public class Disciplina {
         return this.professores;
     }
 
+    public void addAluno(Aluno aluno){
+        this.aluno.add(aluno);
+    }
+    public void addProfessor(Professor professor){
+        this.professor.add(professor);
+    }
+
     @Override
     public String toString(){
-        return "Disciplina{" + super.toString() + ", disciplina = " + getNomeDisplina() + "}";
+        return "Disciplina{" + super.toString() + ", disciplina = " + getNomeDisplina() + ", alunos = " + getAlunos() +", professores = " + getProfessores() +"}";
     }
 }
