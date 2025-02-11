@@ -4,5 +4,8 @@ public class Principal{
 
         Aluno aluno1 = new Aluno("Rafael", 34,123436466437l,1001);
         System.out.println(aluno1.toString());
+
+        Professor professor1 = new Professor("Rafael", 34,123436466437l,10);
+        System.out.println(professor1.toString());
     }
 }
