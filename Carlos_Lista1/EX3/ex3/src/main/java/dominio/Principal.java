@@ -20,7 +20,7 @@ public class Principal {
         EntityManager em = emf.createEntityManager();
 
         // Cria os objetos conforme especificado
-        Vendedor vendedor = new Vendedor("SeuNome", SuaIdade, 1); 
+        Vendedor vendedor = new Vendedor("Carlos", 20, 1); 
         Cliente cliente = new Cliente("Rafael", 34, 1);
 
         // Inicia transação com o banco de dados
