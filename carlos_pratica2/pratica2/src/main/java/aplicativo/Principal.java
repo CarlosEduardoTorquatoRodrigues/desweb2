@@ -29,10 +29,10 @@ public class Principal {
             em.getTransaction().begin();
     
             // Criação dos produtos
-            Produto produto1 = new Produto("Notebook", 3500.00);
-            Produto produto2 = new Produto("Smartphone", 2000.00);
-            Produto produto3 = new Produto("Tablet", 1200.00);
-            Produto produto4 = new Produto("Monitor", 800.00);
+            Produto produto1 = new Produto("Notebook", 4500.00);
+            Produto produto2 = new Produto("Smartphone", 3000.00);
+            Produto produto3 = new Produto("Tablet", 2200.00);
+            Produto produto4 = new Produto("Monitor", 1100.00);
             
             // Persistindo os produtos
             em.persist(produto1);
@@ -41,10 +41,10 @@ public class Principal {
             em.persist(produto4);
             
             // Criação dos clientes
-            Cliente cliente1 = new Cliente("Juca Silva");
-            Cliente cliente2 = new Cliente("Marcos Oliveira");
+            Cliente cliente1 = new Cliente("Julia Silva");
+            Cliente cliente2 = new Cliente("Leo Torres");
             Cliente cliente3 = new Cliente("Carlos Eduardo"); 
-            Cliente cliente4 = new Cliente("Pedro Sousa");
+            Cliente cliente4 = new Cliente("Maycon Dias");
             
             // Persistindo os clientes
             em.persist(cliente1);
