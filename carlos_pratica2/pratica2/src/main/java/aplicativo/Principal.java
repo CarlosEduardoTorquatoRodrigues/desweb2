@@ -21,71 +21,70 @@ public class Principal {
         EntityManager em = null;
         
         try {
-            // Instancia o EntityManagerFactory com as configurações de persistencia
+            
             emf = Persistence.createEntityManagerFactory("aula-jpa"); 
-            // Instancia o EntityManager
+            
             em = emf.createEntityManager(); 
             
             em.getTransaction().begin();
     
-            // Criação dos produtos
+            
             Produto produto1 = new Produto("Notebook", 4500.00);
             Produto produto2 = new Produto("Smartphone", 3000.00);
             Produto produto3 = new Produto("Tablet", 2200.00);
             Produto produto4 = new Produto("Monitor", 1100.00);
             
-            // Persistindo os produtos
+            
             em.persist(produto1);
             em.persist(produto2);
             em.persist(produto3);
             em.persist(produto4);
             
-            // Criação dos clientes
+            
             Cliente cliente1 = new Cliente("Julia Silva");
             Cliente cliente2 = new Cliente("Leo Torres");
             Cliente cliente3 = new Cliente("Carlos Eduardo"); 
             Cliente cliente4 = new Cliente("Maycon Dias");
             
-            // Persistindo os clientes
+            
             em.persist(cliente1);
             em.persist(cliente2);
             em.persist(cliente3);
             em.persist(cliente4);
             
-            // Criação das vendas
-            // Venda 1
+            
             Venda venda1 = new Venda();
             venda1.setCliente(cliente1);
             venda1.setProdutos(Arrays.asList(produto1, produto2));
             venda1.setValorTotal(produto1.getPreco() + produto2.getPreco());
             
-            // Venda 2
+            
             Venda venda2 = new Venda();
             venda2.setCliente(cliente2);
             venda2.setProdutos(Arrays.asList(produto3));
             venda2.setValorTotal(produto3.getPreco());
             
-            // Venda 3
+            
             Venda venda3 = new Venda();
             venda3.setCliente(cliente3);
             venda3.setProdutos(Arrays.asList(produto1, produto4));
             venda3.setValorTotal(produto1.getPreco() + produto4.getPreco());
             
-            // Venda 4
+            
             Venda venda4 = new Venda();
             venda4.setCliente(cliente4);
             venda4.setProdutos(Arrays.asList(produto2, produto3, produto4));
             venda4.setValorTotal(produto2.getPreco() + produto3.getPreco() + produto4.getPreco());
             
-            // Persistindo as vendas
+            
             em.persist(venda1);
             em.persist(venda2);
             em.persist(venda3);
             em.persist(venda4);
             
-            em.getTransaction().commit(); // Confirmar as alterações realizadas
+            em.getTransaction().commit(); 
             
-            // Mostrar o resultado dos selects
+            
             System.out.println("\n--- SELECT * FROM cliente ---");
             List<Cliente> clientes = em.createQuery("SELECT c FROM Cliente c", Cliente.class).getResultList();
             for (Cliente c : clientes) {
