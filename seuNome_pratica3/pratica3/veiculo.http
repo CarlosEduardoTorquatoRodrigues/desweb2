@@ -1,0 +1,58 @@
+# Definição de variáveis
+@base_url = https://jubilant-fiesta-q7q564g95gx5c9v4x-8080.app.github.dev
+
+
+### Listar todos os veículos
+GET {{base_url}}/api/veiculos
+Content-Type: application/json
+
+### Inserir novo veículo
+POST {{base_url}}/api/veiculos
+Content-Type: application/json
+
+{
+    "modelo": "Honda Civic",
+    "ano": 2023,
+    "valor": 95000.00
+}
+
+### Inserir segundo veículo
+POST {{base_url}}/api/veiculos
+Content-Type: application/json
+
+{
+    "modelo": "Toyota Corolla",
+    "ano": 2022,
+    "valor": 85000.00
+}
+
+### Inserir terceiro veículo
+POST {{base_url}}/api/veiculos
+Content-Type: application/json
+
+{
+    "modelo": "Volkswagen Jetta",
+    "ano": 2024,
+    "valor": 110000.00
+}
+
+### Inserir quarto veículo
+POST {{base_url}}/api/veiculos
+Content-Type: application/json
+
+{
+    "modelo": "Ford Focus",
+    "ano": 2021,
+    "valor": 75000.00
+}
+
+### Buscar veículo por ID
+GET {{base_url}}/api/veiculos/1
+Content-Type: application/json
+
+### Deletar veículo
+DELETE {{base_url}}/api/veiculos/1
+Content-Type: application/json
+
+
+
