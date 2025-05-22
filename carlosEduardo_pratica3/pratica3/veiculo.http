@@ -1,5 +1,5 @@
 # Definição de variáveis
-@base_url = https://jubilant-fiesta-q7q564g95gx5c9v4x-8080.app.github.dev
+@base_url = https://humble-space-succotash-5gq75r55qgv9h59q-8080.app.github.dev
 
 
 ### Listar todos os veículos
@@ -11,19 +11,20 @@ POST {{base_url}}/api/veiculos
 Content-Type: application/json
 
 {
-    "modelo": "Honda Civic",
-    "ano": 2023,
-    "valor": 95000.00
+    "modelo": "Ferrari F12",
+    "ano": 2022,
+    "valor": 850000.00
 }
+
 
 ### Inserir segundo veículo
 POST {{base_url}}/api/veiculos
 Content-Type: application/json
 
 {
-    "modelo": "Toyota Corolla",
-    "ano": 2022,
-    "valor": 85000.00
+    "modelo": "Audi R8",
+    "ano": 2024,
+    "valor": 450000.00
 }
 
 ### Inserir terceiro veículo
@@ -31,19 +32,20 @@ POST {{base_url}}/api/veiculos
 Content-Type: application/json
 
 {
-    "modelo": "Volkswagen Jetta",
-    "ano": 2024,
-    "valor": 110000.00
+    "modelo": "Lamborghini Aventador SVJ",
+    "ano": 2023,
+    "valor": 7000000.00
 }
+
 
 ### Inserir quarto veículo
 POST {{base_url}}/api/veiculos
 Content-Type: application/json
 
 {
-    "modelo": "Ford Focus",
+    "modelo": "Ford Mustang",
     "ano": 2021,
-    "valor": 75000.00
+    "valor": 750000.00
 }
 
 ### Buscar veículo por ID
