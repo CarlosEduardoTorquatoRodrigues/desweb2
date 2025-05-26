@@ -1,0 +1,58 @@
+# Definição de variáveis
+@base_url = https://humble-space-succotash-5gq75r55qgv9h59q-8080.app.github.dev
+
+
+### Listar todos os veículos
+GET {{base_url}}/api/veiculos
+Content-Type: application/json
+
+### Inserir novo veículo
+POST {{base_url}}/api/veiculos
+Content-Type: application/json
+
+{
+    "modelo": "Ferrari",
+    "ano": 2023,
+    "valor": 97000.00
+}
+
+### Inserir segundo veículo
+POST {{base_url}}/api/veiculos
+Content-Type: application/json
+
+{
+    "modelo": "Fusca",
+    "ano": 2024,
+    "valor": 75000.00
+}
+
+### Inserir terceiro veículo
+POST {{base_url}}/api/veiculos
+Content-Type: application/json
+
+{
+    "modelo": "Camaro",
+    "ano": 2024,
+    "valor": 110000.00
+}
+
+### Inserir quarto veículo
+POST {{base_url}}/api/veiculos
+Content-Type: application/json
+
+{
+    "modelo": "Honda Civic",
+    "ano": 2025,
+    "valor": 75000.00
+}
+
+### Buscar veículo por ID
+GET {{base_url}}/api/veiculos/1
+Content-Type: application/json
+
+### Deletar veículo
+DELETE {{base_url}}/api/veiculos/1
+Content-Type: application/json
+
+
+
